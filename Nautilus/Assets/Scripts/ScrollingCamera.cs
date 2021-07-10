@@ -8,21 +8,21 @@ public class ScrollingCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       vCamera.m_Lens.FieldOfView=98;
+        vCamera.m_Lens.OrthographicSize = 19;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.mouseScrollDelta.y > 0 && vCamera.m_Lens.FieldOfView<=134)
+        if (Input.mouseScrollDelta.y > 0 && vCamera.m_Lens.OrthographicSize<=35)
         {
            
-            vCamera.m_Lens.FieldOfView = vCamera.m_Lens.FieldOfView + Input.mouseScrollDelta.y;
+            vCamera.m_Lens.OrthographicSize = vCamera.m_Lens.OrthographicSize + Input.mouseScrollDelta.y;
         }
-        if (Input.mouseScrollDelta.y < 0 && vCamera.m_Lens.FieldOfView >= 82)
+        if (Input.mouseScrollDelta.y < 0 && vCamera.m_Lens.OrthographicSize >= 11)
         {
 
-            vCamera.m_Lens.FieldOfView = vCamera.m_Lens.FieldOfView + Input.mouseScrollDelta.y;
+            vCamera.m_Lens.OrthographicSize = vCamera.m_Lens.OrthographicSize + Input.mouseScrollDelta.y;
         }
     }
 }
