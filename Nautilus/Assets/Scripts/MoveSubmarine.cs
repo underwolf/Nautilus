@@ -31,6 +31,7 @@ public class MoveSubmarine : MonoBehaviour
         {
             canmove = false;
             GameObject.FindObjectOfType<PlayerMovement>().setPlayerMove(true);
+            GameObject.FindObjectOfType<minigameManager>().setUiText("");
         }
     }
 
